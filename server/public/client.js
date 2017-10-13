@@ -8,8 +8,47 @@ function f1() {
   $('#subtract').on('click', calculate);
   $('#multiply').on('click', calculate);
   $('#divide').on('click', calculate);
+  $('.num').on('click', pressBtn);
+  $('.op').on('click', operate);
+  $('#submit').on('click', calc2);
 
 }
+
+var input = '', input2 = {};
+
+function pressBtn() {
+  console.log($(this).text());
+  input += $(this).text();
+}
+
+function operate() {
+  console.log($(this).text());
+  input += $(this).text();
+}
+
+function calc2() {
+  console.log(input);
+  parser(input);
+  console.log(input2);
+}
+
+function parser(str) {
+  var nums = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+  var first = 0, second = 0, type = '';
+  for (var i = 0; i < str.length; i ++) {
+    if (!nums.includes(str.charAt(i))) {
+      first = str.slice(0, i);
+      second = str.slice(i + 1);
+      type = str.charAt(i);
+    }
+  }
+  input2.x = first;
+  input2.y = second;
+  input2.type = type;
+}
+
+
+
 
 function calculate() {
   var x = $('#first').val();

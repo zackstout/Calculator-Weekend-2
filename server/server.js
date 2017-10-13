@@ -11,17 +11,20 @@ var out = '';
 
 app.post('/calculate', function(req, res) {
   var input = req.body;
+  var x = parseInt(input.x);
+  var y = parseInt(input.y);
   console.log(input);
 
   var output = '';
   if (input.type === "add"){
-    output = input.x + input.y;
+    output = x + y;
   } else if (input.type === "subtract"){
-    output = input.x - input.y;
+    output = x - y;
   } else if (input.type === "multiply"){
-    output = input.x * input.y;
+    output = x * y;
   } else if (input.type === "divide"){
-    output = input.x / input.y;
+    var divide = x / y;
+    output = divide.toFixed(4);
   }
   console.log(output);
   res.sendStatus(201);
