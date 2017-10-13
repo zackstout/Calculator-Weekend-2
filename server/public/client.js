@@ -9,28 +9,12 @@ function f1() {
   $('#multiply').on('click', calculate);
   $('#divide').on('click', calculate);
   $('.num').on('click', pressBtn);
-  $('.op').on('click', operate);
   $('#submit').on('click', calc2);
 
 }
 
+//New button-calculator functionality:
 var input = '', input2 = {};
-
-function pressBtn() {
-  console.log($(this).text());
-  input += $(this).text();
-}
-
-function operate() {
-  console.log($(this).text());
-  input += $(this).text();
-}
-
-function calc2() {
-  console.log(input);
-  parser(input);
-  console.log(input2);
-}
 
 function parser(str) {
   var nums = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
@@ -47,9 +31,63 @@ function parser(str) {
   input2.type = type;
 }
 
+function pressBtn() {
+  console.log($(this).text());
+  input += $(this).text();
+}
 
 
 
+
+
+
+function calc2() {
+  console.log(input);
+  parser(input);
+  console.log(input2);
+  var x = input2.x, y = input2.y, type = input2.type;
+  $.ajax({
+    method: 'POST',
+    url: '/calculate2',
+    data: {
+      x: x,
+      y: y,
+      type: type
+    }
+  })
+  .done(function(response) {
+    console.log('success');
+    getResult2();
+    input = '';
+  })
+  .fail(function(msg) {
+    console.log('whoops', msg);
+  });
+}
+
+function getResult2() {
+  $.ajax({
+    type: 'GET',
+    url: '/calculate2'
+  })
+  .done(function(response) {
+    var out = response;
+    console.log ("out: ", out);
+    $('#result2').text(out);
+  })
+  .fail(function(msg) {
+    console.log(msg);
+  });
+}
+
+
+
+
+
+
+
+
+//Original functionality:
 function calculate() {
   var x = $('#first').val();
   var y = $('#second').val();
