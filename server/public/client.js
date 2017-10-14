@@ -64,6 +64,8 @@ function getResult666(x, y, type) {
 function pressBtn2() {
   console.log($(this).text());
   input3 += $(this).text();
+  $('#result3').append($(this).text());
+
 }
 
 function parser1(str) {
