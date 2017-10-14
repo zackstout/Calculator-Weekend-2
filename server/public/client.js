@@ -12,6 +12,14 @@ function f1() {
   $('.num').on('click', pressBtn);
   $('.op').on('click', pressBtn);
   $('#submit').on('click', calc2);
+  $('#base').hide();
+  $('#hard').hide();
+  $('#togBase').on('click', function() {
+    $('#base').toggle();
+  });
+  $('#togHard').on('click', function() {
+    $('#hard').toggle();
+  });
 
 }
 

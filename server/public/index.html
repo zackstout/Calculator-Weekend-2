@@ -1,30 +1,41 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Calculator</title>
-    <script src="jquery.js" charset="utf-8"></script>
-    <script src="client.js" charset="utf-8"></script>
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <h1>Get Calculatin</h1>
+<head>
+  <meta charset="utf-8">
+  <title>Calculator</title>
+  <script src="jquery.js" charset="utf-8"></script>
+  <script src="client.js" charset="utf-8"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Get Calculatin</h1>
+  <div id="navigation">
+    <button class="nav" id="togBase">Base Mode</button><br><br>
+    <button class="nav" id="togHard">Hard Mode</button><br>
+  </div>
+  <div id="base">
+    <h2> the skeleton </h2>
     First number: <input id = "first" type="text"/>
     Second number: <input id = "second" type="text"/><br><br>
-    <button id="add" data-type="add">Add 'em foo'</button>
-    <button id="subtract" data-type="subtract">Subtract 'em foo'</button>
-    <button id="multiply" data-type="multiply"> Multiply 'em foo'</button>
-    <button id="divide" data-type="divide">Divide 'em foo'</button><br>
+    <button class = "base" id="add" data-type="add">Add 'em foo'</button>
+    <button class = "base" id="subtract" data-type="subtract">Subtract 'em foo'</button>
+    <button class = "base" id="multiply" data-type="multiply"> Multiply 'em foo'</button>
+    <button class = "base" id="divide" data-type="divide">Divide 'em foo'</button><br><br>
 
     <div id="result">
     </div>
-    <br><br>
+  </div>
+  <br><br>
+  <div id="hard">
+    <h2> the flesh </h2>
     <div id="calc">
       <table>
         <thead>
+          <th colspan="4">  <div id="result2">
+          </div></th>
         </thead>
         <tbody>
-          <tr>
+          <tr id="rowOne">
             <td> <button class="num" id="1">1</button></td>
             <td> <button class="num" id="2">2</button></td>
             <td> <button class="num" id="3">3</button></td>
@@ -51,9 +62,9 @@
         </tbody>
       </table>
     </div>
-    <div id="result2">
-    </div>
+  </div>
 
 
-  </body>
+
+</body>
 </html>
