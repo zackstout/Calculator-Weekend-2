@@ -11,24 +11,102 @@ function f1() {
   $('#divide').on('click', calculate);
   $('.num').on('click', pressBtn);
   $('.op').on('click', pressBtn);
+  $('.num2').on('click', pressBtn2);
+  $('.op2').on('click', pressBtn2);
   $('#submit').on('click', calc2);
+  $('#submit2').on('click', calc3);
   $('#base').hide();
   $('#hard').hide();
+  $('#pro').hide();
   $('#togBase').on('click', function() {
     $('#base').toggle();
   });
   $('#togHard').on('click', function() {
     $('#hard').toggle();
   });
+  $('#togPro').on('click', function() {
+    $('#pro').toggle();
+  });
 
 }
 
-// to do:
+//console.log count: 14
+
+
+// TO DO:
 // add functionality for negative numbers
 // add screen, keep display as current number
 // add decimal point functionality
 // clean up division function
 // update dom with history of calculations
+
+
+
+//Pro mode functionality
+
+var input3 = '', input4 = {};
+
+function pressBtn2() {
+  console.log($(this).text());
+  input3 += $(this).text();
+}
+
+function parser1(str) {
+  var nums = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+  var first = 0, second = 0, type = '';
+  for (var i = 0; i < str.length; i ++) {
+    if (!nums.includes(str.charAt(i))) {
+      first = str.slice(0, i);
+      second = str.slice(i + 1);
+      type = str.charAt(i);
+    }
+  }
+  input4.x = first;
+  input4.y = second;
+  input4.type = type;
+}
+
+function calc3() {
+  console.log(input3);
+  parser1(input3);
+  console.log(parser(input3));
+  console.log(input4);
+  var x = input4.x, y = input4.y, type = input4.type;
+  $.ajax({
+    method: 'POST',
+    url: '/calculate3',
+    data: {
+      x: x,
+      y: y,
+      type: type
+    }
+  })
+  .done(function(response) {
+    console.log('success');
+    getResult3();
+    input = '';
+  })
+  .fail(function(msg) {
+    console.log('whoops', msg);
+  });
+}
+
+function getResult3() {
+  $.ajax({
+    type: 'GET',
+    url: '/calculate3'
+  })
+  .done(function(response) {
+    var out = response;
+    console.log ("out: ", out);
+    $('#result3').text(out);
+  })
+  .fail(function(msg) {
+    console.log(msg);
+  });
+}
+
+
 
 //Hard mode functionality (Parse, Type, Post and Get):
 var input = '', input2 = {};

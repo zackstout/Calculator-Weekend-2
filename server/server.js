@@ -70,8 +70,38 @@ app.get('/calculate2', function(req, res) {
 });
 
 
-//Listener
+//Pro mode routes:
+var out3 = '';
 
+app.post('/calculate3', function(req, res) {
+  var input = req.body;
+  var x = parseInt(input.x);
+  var y = parseInt(input.y);
+
+  console.log(input);
+
+  var output2 = '';
+  if (input.type === "+"){
+    output2 = x + y;
+  } else if (input.type === "-"){
+    output2 = x - y;
+  } else if (input.type === "x"){
+    output2 = x * y;
+  } else if (input.type === "/"){
+    var divide = x / y;
+    output2 = divide.toFixed(4);
+  }
+  console.log(output2);
+  res.sendStatus(201);
+  out3 = output2;
+});
+
+app.get('/calculate3', function(req, res) {
+  res.send(String(out3));
+});
+
+
+//Listener
 app.listen(port, function() {
   console.log('thx for listening on channel', port);
 });
