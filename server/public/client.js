@@ -15,8 +15,16 @@ function f1() {
   $('.op2').on('click', pressBtn2);
   $('#submit').on('click', calc2);
   $('#submit2').on('click', calc3);
+  $('#again').on('click', clear);
   organizer();
 
+}
+
+function clear() {
+  $('#first').val('');
+  $('#second').val('');
+  $('#result').text('');
+  $('#first').focus();
 }
 
 function organizer() {
@@ -97,7 +105,7 @@ function calc3() {
   console.log(input3);
   parser1(input3);
   // console.log(parser1(input3));
-  // there's nothing to log! it returns zilch
+  // there's nothing to log! parser1 returns zilch
   console.log(input4);
   var x = input4.x, y = input4.y, type = input4.type;
   $.ajax({
@@ -114,6 +122,9 @@ function calc3() {
     getResult3();
     console.log(getResult666(x, y, type));
     input3 = '';
+    // if ($('#result3').text().length !== 0) {
+    //   input3 = $('#result3').text();
+    // }
     // var resultingNum = getResult(input4.x, input4.y, input4.type);
     $('#history').append('<p>' + input4.x + input4.type +
      input4.y + "=" +

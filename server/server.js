@@ -10,7 +10,7 @@ app.use(express.static('server/public'));
 app.use(bodyParser.urlencoded({ extended: true }));
 
 //Base mode routes (Post and Get):
-var out = '';
+// var out = '';
 
 app.post('/calculate', function(req, res) {
   var input = req.body;
@@ -30,9 +30,9 @@ app.post('/calculate', function(req, res) {
     output = divide.toFixed(4);
   }
   console.log(output);
-  out = output;
+  // out = output;
 
-  res.send(String(out));
+  res.send(String(output));
   //
   // res.sendStatus(201);
 });

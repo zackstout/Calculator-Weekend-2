@@ -15,7 +15,7 @@ html, body {
   align: center;
 }
 
-.num:hover, .op:hover, .num2:hover, .op2:hover {
+.num:hover, .op:hover, .num2:hover, .op2:hover, #again:hover {
   background-color: plum;
 }
 
@@ -68,6 +68,12 @@ th {
   height: 84px;
   font-size: 14px;
   padding: 15px;
+}
+
+.base {
+  width: 100px;
+  height: 60px;
+  margin: 22px;
 }
 
 .nav:hover {
