@@ -2,6 +2,7 @@ console.log('js');
 
 $(document).ready(f1);
 
+//Event listeners:
 function f1() {
   console.log('jq');
   $('#add').on('click', calculate);
@@ -9,11 +10,12 @@ function f1() {
   $('#multiply').on('click', calculate);
   $('#divide').on('click', calculate);
   $('.num').on('click', pressBtn);
+  $('.op').on('click', pressBtn);
   $('#submit').on('click', calc2);
 
 }
 
-//New button-calculator functionality:
+//Hard mode functionality (Parse, Type, Post and Get):
 var input = '', input2 = {};
 
 function parser(str) {
@@ -35,11 +37,6 @@ function pressBtn() {
   console.log($(this).text());
   input += $(this).text();
 }
-
-
-
-
-
 
 function calc2() {
   console.log(input);
@@ -81,13 +78,7 @@ function getResult2() {
 }
 
 
-
-
-
-
-
-
-//Original functionality:
+//Base mode functionality (Post and Get):
 function calculate() {
   var x = $('#first').val();
   var y = $('#second').val();
