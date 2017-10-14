@@ -78,7 +78,7 @@ app.post('/calculate3', function(req, res) {
   var x = parseInt(input.x);
   var y = parseInt(input.y);
 
-  console.log(input);
+  console.log("thx", input);
 
   var output2 = '';
   if (input.type === "+"){

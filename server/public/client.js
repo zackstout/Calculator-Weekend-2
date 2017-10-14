@@ -32,7 +32,6 @@ function f1() {
 
 //console.log count: 14
 
-
 // TO DO:
 // add functionality for negative numbers
 // add screen, keep display as current number
@@ -41,10 +40,26 @@ function f1() {
 // update dom with history of calculations
 
 
-
-//Pro mode functionality
-
+//Pro mode functionality (Type, Parse, Post and Get)
 var input3 = '', input4 = {};
+//
+// the weird way i tried to do it at first involved this var "fire"
+// var fire = '';
+
+
+function getResult666(x, y, type) {
+  var res = '';
+  if (type == "/") {
+    res = x/y;
+  } else if (type == "x") {
+    res = x*y;
+  } else if (type == "+") {
+    res = parseInt(x) + parseInt(y);
+  } else if (type == "-") {
+    res = x - y;
+  }
+  return res;
+}
 
 function pressBtn2() {
   console.log($(this).text());
@@ -69,7 +84,8 @@ function parser1(str) {
 function calc3() {
   console.log(input3);
   parser1(input3);
-  console.log(parser(input3));
+  // console.log(parser1(input3));
+  // there's nothing to log! it returns zilch
   console.log(input4);
   var x = input4.x, y = input4.y, type = input4.type;
   $.ajax({
@@ -84,12 +100,18 @@ function calc3() {
   .done(function(response) {
     console.log('success');
     getResult3();
-    input = '';
+    console.log(getResult666(x, y, type));
+    input3 = '';
+    // var resultingNum = getResult(input4.x, input4.y, input4.type);
+    $('#history').append('<p>' + input4.x + input4.type +
+     input4.y + "=" +
+     getResult666(x, y, type) + '</p>');
   })
   .fail(function(msg) {
     console.log('whoops', msg);
   });
 }
+
 
 function getResult3() {
   $.ajax({
@@ -100,12 +122,14 @@ function getResult3() {
     var out = response;
     console.log ("out: ", out);
     $('#result3').text(out);
+    // fire = out;
   })
   .fail(function(msg) {
     console.log(msg);
   });
-}
 
+  // return fire;
+}
 
 
 //Hard mode functionality (Parse, Type, Post and Get):
