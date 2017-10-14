@@ -16,6 +16,7 @@ function f1() {
   $('#submit').on('click', calc2);
   $('#submit2').on('click', calc3);
   $('#again').on('click', clear);
+  $('#clear').on('click', clear2);
   organizer();
 
 }
@@ -25,6 +26,10 @@ function clear() {
   $('#second').val('');
   $('#result').text('');
   $('#first').focus();
+}
+
+function clear2() {
+  $('#result3').text('');
 }
 
 function organizer() {
