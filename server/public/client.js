@@ -15,6 +15,13 @@ function f1() {
 
 }
 
+// to do:
+// add functionality for negative numbers
+// add screen, keep display as current number
+// add decimal point functionality
+// clean up division function
+// update dom with history of calculations
+
 //Hard mode functionality (Parse, Type, Post and Get):
 var input = '', input2 = {};
 
