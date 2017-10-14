@@ -40,7 +40,7 @@ function f1() {
 // update dom with history of calculations
 
 
-//Pro mode functionality (Type, Parse, Post and Get)
+//Pro mode functionality (CalcOut, Type, Parse, Post and Get)
 var input3 = '', input4 = {};
 //
 // the weird way i tried to do it at first involved this var "fire"
@@ -74,6 +74,9 @@ function parser1(str) {
   for (var i = 0; i < str.length; i ++) {
     if (!nums.includes(str.charAt(i))) {
       first = str.slice(0, i);
+      if (first.length === 0) {
+        first = $('#result3').text();
+      }
       second = str.slice(i + 1);
       type = str.charAt(i);
     }
@@ -132,6 +135,8 @@ function getResult3() {
 
   // return fire;
 }
+
+
 
 
 //Hard mode functionality (Parse, Type, Post and Get):
@@ -195,6 +200,8 @@ function getResult2() {
     console.log(msg);
   });
 }
+
+
 
 
 //Base mode functionality (Post and Get):
