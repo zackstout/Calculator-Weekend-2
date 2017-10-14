@@ -55,6 +55,7 @@ function organizer() {
 // add decimal point functionality
 // clean up division function
 // update dom with history of calculations
+// add parentheses functionality (seems hard)
 
 
 //Pro mode functionality (CalcOut, Type, Parse, Post and Get)

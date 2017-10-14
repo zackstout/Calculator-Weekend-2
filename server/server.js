@@ -27,11 +27,11 @@ app.post('/calculate', function(req, res) {
     output = x * y;
   } else if (input.type === "divide"){
     var divide = x / y;
-    if (!Number.isInteger(divide)) {
-      output = divide.toFixed(4);
-    } else {
-    output = divide;
-  }}
+    // if (!Number.isInteger(divide)) {
+    //   output = divide.toFixed(4);
+    // } else {
+    output = Math.round(divide*1000)/1000;
+  }
   console.log(output);
   // out = output;
 
@@ -64,11 +64,11 @@ app.post('/calculate2', function(req, res) {
     output = x * y;
   } else if (input.type === "/"){
     var divide = x / y;
-    if (!Number.isInteger(divide)) {
-      output = divide.toFixed(4);
-    } else {
-    output = divide;
-  }}
+    // if (!Number.isInteger(divide)) {
+    //   output = divide.toFixed(4);
+    // } else {
+    output = Math.round(divide*1000)/1000;
+  }
   console.log(output);
   res.sendStatus(201);
   out2 = output;
@@ -98,11 +98,11 @@ app.post('/calculate3', function(req, res) {
     output2 = x * y;
   } else if (input.type === "/"){
     var divide = x / y;
-    if (!Number.isInteger(divide)) {
-      output2 = divide.toFixed(4);
-    } else {
-    output2 = divide;
-  }}
+    // if (!Number.isInteger(divide)) {
+    //   output2 = divide.toFixed(4);
+    // } else {
+    output2 = Math.round(divide*1000)/1000;
+  }
   console.log(output2);
   res.sendStatus(201);
   out3 = output2;
