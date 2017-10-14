@@ -30,13 +30,16 @@ app.post('/calculate', function(req, res) {
     output = divide.toFixed(4);
   }
   console.log(output);
-  res.sendStatus(201);
   out = output;
-});
 
-app.get('/calculate', function(req, res) {
   res.send(String(out));
+  //
+  // res.sendStatus(201);
 });
+//
+// app.get('/calculate', function(req, res) {
+//   res.send(String(out));
+// });
 
 
 //Hard mode routes (Post and Get)

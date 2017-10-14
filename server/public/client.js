@@ -15,6 +15,11 @@ function f1() {
   $('.op2').on('click', pressBtn2);
   $('#submit').on('click', calc2);
   $('#submit2').on('click', calc3);
+  organizer();
+
+}
+
+function organizer() {
   $('#base').hide();
   $('#hard').hide();
   $('#pro').hide();
@@ -27,7 +32,6 @@ function f1() {
   $('#togPro').on('click', function() {
     $('#pro').toggle();
   });
-
 }
 
 //console.log count: 14
@@ -68,6 +72,9 @@ function pressBtn2() {
 
 }
 
+
+//ok so the basic function works except it's messing
+//up the appending function somehow
 function parser1(str) {
   var nums = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
   var first = 0, second = 0, type = '';
@@ -208,7 +215,7 @@ function getResult2() {
 function calculate() {
   var x = $('#first').val();
   var y = $('#second').val();
-  var type = $(this).data().type;
+  var type = $(this).data().poop;
   console.log(type);
 
   $.ajax({
@@ -222,24 +229,26 @@ function calculate() {
   })
   .done(function(response) {
     console.log('Success', response);
-    getResult();
+    var out = response;
+    console.log ("out: ", out);
+    $('#result').text(out);
   })
   .fail(function(message){
     console.log(message);
   });
 }
-
-function getResult() {
-  $.ajax({
-    type: 'GET',
-    url: '/calculate'
-  })
-  .done(function(response) {
-    var out = response;
-    console.log ("out: ", out);
-    $('#result').text(out);
-
-  }).fail(function(msg) {
-    console.log(msg);
-  });
-}
+//
+// function getResult() {
+//   $.ajax({
+//     type: 'GET',
+//     url: '/calculate'
+//   })
+//   .done(function(response) {
+//     var out = response;
+//     console.log ("out: ", out);
+//     $('#result').text(out);
+//
+//   }).fail(function(msg) {
+//     console.log(msg);
+//   });
+// }

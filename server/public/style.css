@@ -15,7 +15,7 @@ html, body {
   align: center;
 }
 
-.num:hover, .op:hover {
+.num:hover, .op:hover, .num2:hover, .op2:hover {
   background-color: plum;
 }
 
@@ -23,7 +23,7 @@ html, body {
   background-color: lightGreen;
 }
 
-#calc {
+#calc, #calc2 {
   width: 400px;
   margin: 0 auto;
   height: 420px;
