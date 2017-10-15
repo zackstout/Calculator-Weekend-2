@@ -45,4 +45,5 @@ function changeBack() {
 // add decimal point functionality
 // add parentheses functionality (seems hard)
 // make it so that if you click a number button after
-//a computation is complete, you start a new string
+//a computation is complete, you start a new string,
+//and so that it shows 0 but doesnt affect the string

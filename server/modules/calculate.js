@@ -22,12 +22,17 @@ module.exports = calculateIt;
 
 function parseForDec(num) {
   if (num.includes('.')) {
-    var first = num.slice(0, num.indexOf('.'));
-    var last = num.slice(num.indexOf('.') + 1);
-    var power = (last.length * (-1));
-    var out = parseInt(first) + Math.pow(10, power);
+    var first = parseInt(num.slice(0, num.indexOf('.')));
+    var last = parseInt(num.slice(num.indexOf('.') + 1));
+    var power = (String(last).length * (-1));
+    var out = first + Math.pow(10, power)*last;
+    console.log(first, last, power, out);
     return out;
   } else {
     return parseInt(num);
   }
+}
+
+function sum(a,b) {
+  return a + b;
 }

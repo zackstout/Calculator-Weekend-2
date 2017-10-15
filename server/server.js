@@ -22,6 +22,7 @@ app.post('/calculate2', function(req, res) {
 
 //Pro mode route:
 app.post('/calculate3', function(req, res) {
+  console.log(req.body);
   res.send(String(calculator(req.body)));
 });
 
