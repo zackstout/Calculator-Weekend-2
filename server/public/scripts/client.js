@@ -17,6 +17,7 @@ function clickHandlers() {
   $('#togPro').on('click', function() {
     $('#pro').toggle();
   });
+
   //base mode buttons:
   $('#add, #subtract, #multiply, #divide').on('click', calculate);
   $('#again').on('click', clear);
@@ -42,7 +43,6 @@ function changeBack() {
 }
 
 // TO DO:
-// add decimal point functionality
 // add parentheses functionality (seems hard)
 // make it so that if you click a number button after
 //a computation is complete, you start a new string,

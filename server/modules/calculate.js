@@ -1,3 +1,4 @@
+
 function calculateIt(input) {
   var x = parseForDec(input.x);
   var y = parseForDec(input.y);

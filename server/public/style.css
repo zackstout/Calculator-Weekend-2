@@ -80,7 +80,7 @@ th {
   font-family: "calc";
   src: url('public/digital-7.tff');
 }*/
-#result2, #result3 {
+#result2, #result3, #nil {
   font-size: 32px;
   color: green;
   text-align: right;

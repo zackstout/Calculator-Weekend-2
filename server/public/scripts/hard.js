@@ -2,11 +2,10 @@
 var inputHard = '';
 var nums = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '.'];
 
-
+//Parsing the input-string into an actionable computation:
 function parserReal(str) {
   var out = {};
   var first = 0, second = 0, type = '';
-
   for (var i = 0; i < str.length; i ++) {
     if (!nums.includes(str.charAt(i))) {
       first = str.slice(0, i);
@@ -38,6 +37,7 @@ function beautify(str) {
   return out;
 }
 
+//Handling the functionality of submit button:
 function pressBtnHard() {
   console.log($(this).text());
   inputHard += $(this).text();

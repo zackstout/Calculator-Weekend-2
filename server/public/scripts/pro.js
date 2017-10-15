@@ -6,6 +6,7 @@ function clearPro() {
   console.log($('#result3').text());
   $('#result3').text('');
   counter = 0;
+  $('#nil').show();
 }
 
 //all other buttons:
@@ -13,8 +14,10 @@ function pressBtnPro() {
   console.log("button", $(this).text());
   inputPro += $(this).text();
   $('#result3').append($(this).text());
+  $('#nil').hide();
 }
 
+//enter button:
 function calcPro() {
   var obj = parserReal(inputPro);
   console.log("object", obj);
