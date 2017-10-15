@@ -1,12 +1,14 @@
 
 var inputPro = '', proObj = {}, counter = 0;
 
+//clear button:
 function clearPro() {
   console.log($('#result3').text());
   $('#result3').text('');
   counter = 0;
 }
 
+//all other buttons:
 function pressBtnPro() {
   console.log("button", $(this).text());
   inputPro += $(this).text();
@@ -15,27 +17,23 @@ function pressBtnPro() {
 
 function calcPro() {
   var obj = parserReal(inputPro);
-  var x = obj.x, y = obj.y, type = obj.type;
   console.log("object", obj);
   $.ajax({
     method: 'POST',
     url: '/calculate3',
-    data: {
-      x: x,
-      y: y,
-      type: type
-    }
+    data: obj
   })
   .done(function(response) {
     console.log(Number(response));
     $('#result3').text(response);
     inputPro = '';
+
+    //append results to dom:
     if (counter === 0) {
-      $('#history').append('<p>' + obj.x + obj.type +
-    obj.y + '=' + response + '</p>');
-  } else {
-    $('#history').append('<p>' + obj.x + '=' + response + '</p>');
-  }
+      $('#history').append('<p>' + obj.x + obj.type + obj.y + '=' + response + '</p>');
+    } else {
+      $('#history').append('<p>' + obj.x + '=' + response + '</p>');
+    }
     counter ++;
   })
   .fail(function(msg) {

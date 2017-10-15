@@ -5,6 +5,10 @@ html, body {
  border: 0px;
  }*/
 
+ .fun {
+   color: purple;
+ }
+
 .num, .op, #submit, #submit2, .num2, .op2, #clear {
   font-size: 22px;
   width: 70px;
