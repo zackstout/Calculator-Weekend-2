@@ -43,7 +43,7 @@ function changeBack() {
 
 // TO DO:
 // add decimal point functionality
-// update dom with history of calculations
+// update dom with history of calculations: something is weird with Clear button
 // add parentheses functionality (seems hard)
 // make it so that if you click a number button after
 //a computation is complete, you start a new string

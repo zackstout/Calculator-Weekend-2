@@ -4,6 +4,7 @@ var inputPro = '', proObj = {}, counter = 0;
 function clearPro() {
   console.log($('#result3').text());
   $('#result3').text('');
+  counter = 0;
 }
 
 function pressBtnPro() {
@@ -35,11 +36,7 @@ function calcPro() {
   } else {
     $('#history').append('<p>' + obj.x + '=' + response + '</p>');
   }
-    // $('#history').append('<p>' + input4.x + input4.type +
-    //  input4.y + "=" +
-    //  getResult666(x, y, type) + '</p>');
     counter ++;
-
   })
   .fail(function(msg) {
     console.log('whoops', msg);
