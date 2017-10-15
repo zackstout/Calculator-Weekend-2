@@ -6,7 +6,12 @@ var nums = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '.'];
 function parserReal(str) {
   var out = {};
   var first = 0, second = 0, type = '';
+  console.log(str.charAt(0));
   for (var i = 0; i < str.length; i ++) {
+    // if (str.charAt(0) === '-') {
+    //   str = str.slice(1);
+    //   continue;
+    // }
     if (!nums.includes(str.charAt(i))) {
       first = str.slice(0, i);
       second = str.slice(i + 1);
@@ -37,7 +42,7 @@ function beautify(str) {
   return out;
 }
 
-//Handling the functionality of submit button:
+//Handling the functionality of enter button:
 function pressBtnHard() {
   console.log($(this).text());
   inputHard += $(this).text();

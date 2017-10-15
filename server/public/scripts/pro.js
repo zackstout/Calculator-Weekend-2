@@ -17,6 +17,24 @@ function pressBtnPro() {
   $('#nil').hide();
 }
 
+function addPi() {
+  inputPro += (Math.PI).toFixed(8);
+  $('#result3').append((Math.PI).toFixed(8));
+  // $('#result3').append('<span>&PI;</span>');
+  $('#nil').hide();
+}
+//
+function changeSign() {
+  if ($('#result3').text().charAt(0) === '-') {
+//     inputPro = inputPro.slice(1);
+    $('#result3').text($('#result3').text().slice(1));
+  } else {
+//     inputPro = '-' + inputPro;
+var add = '-' + $('#result3').text();
+    $('#result3').text(add);
+  }
+}
+
 //enter button:
 function calcPro() {
   var obj = parserReal(inputPro);

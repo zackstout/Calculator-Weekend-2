@@ -16,7 +16,7 @@ html, body {
    color: blue;
  }
 
-.num, .op, #submit, #submit2, .num2, .op2, #clear {
+.num, .op, #submit, #submit2, .num2, .op2, .op3, #clear {
   font-size: 22px;
   width: 70px;
   height: 50px;
@@ -26,7 +26,7 @@ html, body {
   align: center;
 }
 
-.num2:focus, .op2:focus, #clear:focus, #submit2:focus {
+.num2:focus, .op2:focus, .op3:focus, #clear:focus, #submit2:focus {
   outline: none;
 }
 
@@ -43,7 +43,7 @@ html, body {
   background-color: plum;
 }
 
-.op2:hover {
+.op2:hover, .op3:hover {
   background-color: deepPink;
 }
 
@@ -70,6 +70,7 @@ th {
   border-radius: 10px;
   border-width: 20px;
   box-shadow: -4px -4px 1px darkSlateGray;
+  overflow: hidden;
 }
 
 #rowOne {
@@ -85,6 +86,8 @@ th {
   color: green;
   text-align: right;
   font-family: "Courier New", Courier, monospace;
+  overflow: hidden;
+
 }
 
 #result {
