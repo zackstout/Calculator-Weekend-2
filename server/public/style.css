@@ -15,9 +15,17 @@ html, body {
   align: center;
 }
 
+.num2:focus, .op2:focus, #clear:focus, #submit2:focus {
+  outline: none;
+}
+
 #clear {
   width: 135px;
   height: 55px;
+}
+
+#clear:hover {
+  background-color: darkOrange;
 }
 
 .num:hover, .op:hover, .num2:hover, .op2:hover, #again:hover {
@@ -34,7 +42,8 @@ html, body {
   height: 420px;
   background-color: gray;
   border-radius: 40px;
-  padding: 12px;
+  padding: 18px;
+  box-shadow: 10px 10px darkSlateGray;
 }
 
 th {
@@ -42,18 +51,25 @@ th {
   width: 400px;
   background-color: lightGreen;
   padding: 10px;
+  margin: 15px;
   border-radius: 10px;
   border-width: 20px;
+  box-shadow: -4px -4px 1px darkSlateGray;
 }
 
 #rowOne {
   margin: 500px;
 }
 
-#result2 {
+/*@font-face {
+  font-family: "calc";
+  src: url('public/digital-7.tff');
+}*/
+#result2, #result3 {
   font-size: 32px;
   color: green;
-  align: right;
+  text-align: right;
+  font-family: "Courier New", Courier, monospace;
 }
 
 #result {

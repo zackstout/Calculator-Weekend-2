@@ -1,41 +1,27 @@
 console.log('js');
 
-$(document).ready(f1);
+$(document).ready(clickHandlers);
 
 //Event listeners:
-function f1() {
+function clickHandlers() {
   console.log('jq');
-  $('#add').on('click', calculate);
-  $('#subtract').on('click', calculate);
-  $('#multiply').on('click', calculate);
-  $('#divide').on('click', calculate);
-  $('.num').on('click', pressBtn);
-  $('.op').on('click', pressBtn);
-  $('.num2').on('click', pressBtn2);
-  $('.op2').on('click', pressBtn2);
-  $('#submit').on('click', calc2);
-  $('#submit2').on('click', calc3);
+  //base mode buttons:
+  $('#add, #subtract, #multiply, #divide').on('click', calculate);
   $('#again').on('click', clear);
+
+  //hard mode buttons:
+  $('.num, .op').on('click', pressBtn);
+  $('#submit').on('click', calc2);
+
+  //pro mode buttons:
+  $('.num2, .op2').on('click', pressBtn2);
+  $('#submit2').on('click', calc3);
   $('#clear').on('click', clear2);
-  organizer();
+  $('.num2, .op2, #submit2, #clear').on('mousedown', changeBorder);
+  $('.num2, .op2, #submit2, #clear').on('mouseup', changeBack);
 
-}
-
-function clear() {
-  $('#first').val('');
-  $('#second').val('');
-  $('#result').text('');
-  $('#first').focus();
-}
-
-function clear2() {
-  $('#result3').text('');
-}
-
-function organizer() {
-  $('#base').hide();
-  $('#hard').hide();
-  $('#pro').hide();
+  //navigation setup:
+  $('#base, #hard, #pro').hide();
   $('#togBase').on('click', function() {
     $('#base').toggle();
   });
@@ -46,8 +32,6 @@ function organizer() {
     $('#pro').toggle();
   });
 }
-
-//console.log count: 14
 
 // TO DO:
 // add functionality for negative numbers
@@ -60,10 +44,18 @@ function organizer() {
 
 //Pro mode functionality (CalcOut, Type, Parse, Post and Get)
 var input3 = '', input4 = {};
-//
-// the weird way i tried to do it at first involved this var "fire"
-// var fire = '';
 
+function changeBorder() {
+  $(this).css("box-shadow", "-4px -4px 1px darkSlateGray");
+}
+
+function changeBack() {
+  $(this).css("box-shadow", "0px 0px");
+}
+
+function clear2() {
+  $('#result3').text('');
+}
 
 function getResult666(x, y, type) {
   var res = '';
@@ -125,8 +117,10 @@ function calc3() {
   })
   .done(function(response) {
     console.log('success');
-    getResult3();
     console.log(getResult666(x, y, type));
+    var out = response;
+    console.log ("out: ", out);
+    $('#result3').text(out);
     input3 = '';
     // if ($('#result3').text().length !== 0) {
     //   input3 = $('#result3').text();
@@ -140,25 +134,25 @@ function calc3() {
     console.log('whoops', msg);
   });
 }
-
-
-function getResult3() {
-  $.ajax({
-    type: 'GET',
-    url: '/calculate3'
-  })
-  .done(function(response) {
-    var out = response;
-    console.log ("out: ", out);
-    $('#result3').text(out);
-    // fire = out;
-  })
-  .fail(function(msg) {
-    console.log(msg);
-  });
-
-  // return fire;
-}
+//
+//
+// function getResult3() {
+//   $.ajax({
+//     type: 'GET',
+//     url: '/calculate3'
+//   })
+//   .done(function(response) {
+//     var out = response;
+//     console.log ("out: ", out);
+//     $('#result3').text(out);
+//     // fire = out;
+//   })
+//   .fail(function(msg) {
+//     console.log(msg);
+//   });
+//
+//   // return fire;
+// }
 
 
 
@@ -201,38 +195,48 @@ function calc2() {
     }
   })
   .done(function(response) {
-    console.log('success');
-    getResult2();
+    console.log('Success', response);
+    var out = response;
+    console.log ("out: ", out);
+    $('#result2').text(out);
     input = '';
   })
   .fail(function(msg) {
     console.log('whoops', msg);
   });
 }
-
-function getResult2() {
-  $.ajax({
-    type: 'GET',
-    url: '/calculate2'
-  })
-  .done(function(response) {
-    var out = response;
-    console.log ("out: ", out);
-    $('#result2').text(out);
-  })
-  .fail(function(msg) {
-    console.log(msg);
-  });
-}
-
+//
+// function getResult2() {
+//   $.ajax({
+//     type: 'GET',
+//     url: '/calculate2'
+//   })
+//   .done(function(response) {
+//     var out = response;
+//     console.log ("out: ", out);
+//     $('#result2').text(out);
+//   })
+//   .fail(function(msg) {
+//     console.log(msg);
+//   });
+// }
+//
 
 
 
 //Base mode functionality (Post and Get):
+
+
+function clear() {
+  $('#first').val('');
+  $('#second').val('');
+  $('#result').text('');
+  $('#first').focus();
+}
 function calculate() {
   var x = $('#first').val();
   var y = $('#second').val();
-  var type = $(this).data().poop;
+  var type = $(this).data().type;
   console.log(type);
 
   $.ajax({

@@ -4,26 +4,30 @@
   <meta charset="utf-8">
   <title>Calculator</title>
   <script src="jquery.js" charset="utf-8"></script>
-  <script src="client.js" charset="utf-8"></script>
+  <script src="scripts/base.js" charset="utf-8"></script>
+  <script src="scripts/hard.js" charset="utf-8"></script>
+  <script src="scripts/pro.js" charset="utf-8"></script>
+  <script src="scripts/client.js" charset="utf-8"></script>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
   <h1>Get Calculatin</h1>
   <div id="navigation">
     <button class="nav" id="togBase">Base Mode</button><br><br>
     <button class="nav" id="togHard">Hard Mode</button><br><br>
     <button class="nav" id="togPro">Pro Mode</button><br>
-
   </div>
+
+
   <div id="base">
-    <h2> the skeleton </h2>
+    <h2> base mode: operate on two numbers! </h2>
     First number: <input id = "first" type="text"/>
     Second number: <input id = "second" type="text"/><br><br>
-    <button class = "base" id="add" data-poop="add">Add 'em foo'</button>
-    <button class = "base" id="subtract" data-poop="subtract">Subtract 'em foo'</button>
-    <button class = "base" id="multiply" data-poop="multiply"> Multiply 'em foo'</button>
-    <button class = "base" id="divide" data-poop="divide">Divide 'em foo'</button><br><br>
-
+    <button class = "base" id="add" data-type="+">Add 'em foo'</button>
+    <button class = "base" id="subtract" data-type="-">Subtract 'em foo'</button>
+    <button class = "base" id="multiply" data-type="x"> Multiply 'em foo'</button>
+    <button class = "base" id="divide" data-type="/">Divide 'em foo'</button><br><br>
     <div id="result">
     </div>
     <div id="restart">
@@ -31,19 +35,18 @@
     </div>
   </div>
   <br><br>
+
+
   <div id="hard">
-    <h2> the flesh </h2>
+    <h2> hard mode: input a calculation to perform! </h2>
     <div id="calc">
       <table>
         <thead>
           <th colspan="4">  <div id="result2">
           </div></th>
         </thead>
-
         <tbody>
-
           <tr class="rowOne">
-
             <td> <button class="num" class="1">1</button></td>
             <td> <button class="num" class="2">2</button></td>
             <td> <button class="num" class="3">3</button></td>
@@ -73,15 +76,15 @@
   </div>
   <br><br>
 
+
   <div id="pro">
-    <h2> the heart </h2>
+    <h2> pro mode: simulate a calculator! </h2>
     <div id="calc2">
       <table>
         <thead>
           <th colspan="4">  <div id="result3">
           </div></th>
         </thead>
-
         <tbody>
           <tr class="rowOne">
             <td> <button class="num2" class="1">1</button></td>
@@ -111,7 +114,6 @@
             <td colspan="2"><button id="clear">C</button></td>
             <td> <button class="op2" id="dec">.</button></td>
             <td> <button id="submit2">=</button></td>
-
           </tr>
         </tbody>
       </table>
@@ -119,8 +121,5 @@
     <div id="history">
     </div>
   </div>
-
-
-
 </body>
 </html>
