@@ -22,12 +22,12 @@ function parserReal(str) {
   return out;
 }
 
-function pressBtn() {
+function pressBtnHard() {
   console.log($(this).text());
   inputHard += $(this).text();
 }
 
-function calcReal() {
+function calcHard() {
   console.log(inputHard);
   console.log(parserReal(inputHard));
   var obj = parserReal(inputHard);

@@ -22,13 +22,13 @@ function clickHandlers() {
   $('#again').on('click', clear);
 
   //hard mode buttons:
-  $('.num, .op').on('click', pressBtn);
-  $('#submit').on('click', calcReal);
+  $('.num, .op').on('click', pressBtnHard);
+  $('#submit').on('click', calcHard);
 
   //pro mode buttons:
-  $('.num2, .op2').on('click', pressBtn2);
-  $('#submit2').on('click', calc3);
-  $('#clear').on('click', clear2);
+  $('.num2, .op2').on('click', pressBtnPro);
+  $('#submit2').on('click', calcPro);
+  $('#clear').on('click', clearPro);
   $('.num2, .op2, #submit2, #clear').on('mousedown', changeBorder);
   $('.num2, .op2, #submit2, #clear').on('mouseup', changeBack);
 }
@@ -45,3 +45,5 @@ function changeBack() {
 // add decimal point functionality
 // update dom with history of calculations
 // add parentheses functionality (seems hard)
+// make it so that if you click a number button after
+//a computation is complete, you start a new string
