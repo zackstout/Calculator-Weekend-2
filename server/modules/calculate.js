@@ -12,7 +12,7 @@ function calculateIt(input) {
     output = x * y;
   } else if (input.type === "/"){
     var divide = x / y;
-    output = Math.round(divide*10000)/10000;
+    output = Math.round(divide*100000)/100000;
   }
   console.log(output);
   return output;

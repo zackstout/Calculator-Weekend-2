@@ -20,7 +20,7 @@ html, body {
 }
 
 #clear {
-  width: 135px;
+  width: 150px;
   height: 55px;
 }
 
@@ -28,8 +28,12 @@ html, body {
   background-color: darkOrange;
 }
 
-.num:hover, .op:hover, .num2:hover, .op2:hover, #again:hover {
+.num:hover, .op:hover, .num2:hover, #again:hover {
   background-color: plum;
+}
+
+.op2:hover {
+  background-color: deepPink;
 }
 
 #submit:hover, #submit2:hover {
@@ -77,11 +81,14 @@ th {
   background-color: goldenrod;
   color: darkBlue;
   border-radius: 15px;
+  text-align: right;
   margin-left: 40%;
   margin-right: 25%;
-  padding-left: 22%;
+  padding-left: 30%;
+  padding-right: 2%;
+  padding-top: 2%;
   height: 50px;
-  width: 80px;
+  width: 100px;
 }
 
 .nav, .base {
