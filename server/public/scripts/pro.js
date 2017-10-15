@@ -23,14 +23,12 @@ function addPi() {
   // $('#result3').append('<span>&PI;</span>');
   $('#nil').hide();
 }
-//
+
 function changeSign() {
   if ($('#result3').text().charAt(0) === '-') {
-//     inputPro = inputPro.slice(1);
     $('#result3').text($('#result3').text().slice(1));
   } else {
-//     inputPro = '-' + inputPro;
-var add = '-' + $('#result3').text();
+    var add = '-' + $('#result3').text();
     $('#result3').text(add);
   }
 }
@@ -38,11 +36,14 @@ var add = '-' + $('#result3').text();
 //enter button:
 function calcPro() {
   var obj = parserReal(inputPro);
-  console.log("object", obj);
+  var obj2 = parserReal($('#result3').text());
+  console.log("object1", obj);
+  console.log("object2", obj2);
   $.ajax({
     method: 'POST',
     url: '/calculate3',
-    data: obj
+    // data: obj
+    data: obj2
   })
   .done(function(response) {
     console.log(Number(response));
