@@ -9,6 +9,23 @@ html, body {
    color: purple;
  }
 
+ #first, #second {
+   font-size: 20px;
+   padding: 4px;
+   margin: 5px;
+ }
+
+ #again {
+   font-size: 16px;
+   width: 220px;
+   height: 75px;
+   margin: 10px;
+ }
+
+ .in {
+   font-size: 19px;
+ }
+
  #history {
    font-size: 24px;
    font-style: oblique;
@@ -77,10 +94,10 @@ th {
   margin: 500px;
 }
 
-/*@font-face {
+@font-face {
   font-family: "calc";
-  src: url('public/digital-7.tff');
-}*/
+  src: url('fonts/pocket_calcuatlor_tt.ttf');
+}
 #result2, #result3, #nil {
   font-size: 32px;
   color: green;
@@ -88,6 +105,10 @@ th {
   font-family: "Courier New", Courier, monospace;
   overflow: hidden;
 
+}
+
+#result3, #nil {
+  font-family: "calc"
 }
 
 #result {

@@ -25,8 +25,9 @@ function parserReal(str) {
 }
 
 function beautify(str) {
-  var out = '';
-  for (var i = 0; i < str.length; i++) {
+  //start at i=1 in order to properly format negative numbers in history
+  var out = str.charAt(i);
+  for (var i = 1; i < str.length; i++) {
     if (!nums.includes(str.charAt(i))) {
       out += ' ';
       out += str.charAt(i);

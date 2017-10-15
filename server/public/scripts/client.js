@@ -46,7 +46,8 @@ function changeBack() {
 
 // TO DO:
 // add parentheses functionality (seems hard and maybe not worth it??????)
-// at one point i screwed up negative numbers: fix that
+// fix overflow
+// save each calculation in array on server
 // also the decimal bug
 // also make it know the order of ops (????)
 // make it so that if you click a number button after
