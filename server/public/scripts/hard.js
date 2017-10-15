@@ -8,10 +8,6 @@ function parserReal(str) {
   var first = 0, second = 0, type = '';
   console.log(str.charAt(0));
   for (var i = 0; i < str.length; i ++) {
-    // if (str.charAt(0) === '-') {
-    //   str = str.slice(1);
-    //   continue;
-    // }
     if (!nums.includes(str.charAt(i))) {
       first = str.slice(0, i);
       second = str.slice(i + 1);

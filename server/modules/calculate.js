@@ -26,6 +26,11 @@ function parseForDec(num) {
     var last = parseInt(num.slice(num.indexOf('.') + 1));
     var power = (String(last).length * (-1));
     var out = first + Math.pow(10, power)*last;
+
+    //trying to get negative decimals live:
+    if (num.includes('-')) {
+      out = first - Math.pow(10, power)*last;
+    }
     console.log(first, last, power, out);
     return out;
   } else {

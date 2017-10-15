@@ -36,6 +36,7 @@ function changeSign() {
 //enter button:
 function calcPro() {
   var obj = parserReal(inputPro);
+  //all we needed to get negatives live:
   var obj2 = parserReal($('#result3').text());
   console.log("object1", obj);
   console.log("object2", obj2);
