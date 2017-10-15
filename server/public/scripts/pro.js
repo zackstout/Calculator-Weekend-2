@@ -30,9 +30,10 @@ function calcPro() {
 
     //append results to dom:
     if (counter === 0) {
-      $('#history').append('<p>' + obj.x + obj.type + obj.y + '=' + response + '</p>');
+      $('#history').append('<p>' + ' ' + obj.x + ' ' + obj.type + ' ' + obj.y + ' = ' + response + '</p>');
     } else {
-      $('#history').append('<p>' + obj.x + '=' + response + '</p>');
+      console.log(obj.x);
+      $('#history').append('<p>' + obj.x + ' = ' + response + '</p>');
     }
     counter ++;
   })

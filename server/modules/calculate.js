@@ -2,7 +2,6 @@ function calculateIt(input) {
   var x = parseForDec(input.x);
   var y = parseForDec(input.y);
   console.log(input);
-
   var output = '';
   if (input.type === "+"){
     output = x + y;
@@ -18,8 +17,6 @@ function calculateIt(input) {
   return output;
 }
 
-module.exports = calculateIt;
-
 function parseForDec(num) {
   if (num.includes('.')) {
     var first = parseInt(num.slice(0, num.indexOf('.')));
@@ -33,6 +30,4 @@ function parseForDec(num) {
   }
 }
 
-function sum(a,b) {
-  return a + b;
-}
+module.exports = calculateIt;

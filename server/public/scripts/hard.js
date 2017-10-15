@@ -1,9 +1,10 @@
 
 var inputHard = '';
+var nums = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '.'];
+
 
 function parserReal(str) {
   var out = {};
-  var nums = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '.'];
   var first = 0, second = 0, type = '';
 
   for (var i = 0; i < str.length; i ++) {
@@ -13,13 +14,27 @@ function parserReal(str) {
       type = str.charAt(i);
       //extra test for pro mode:
       if (first.length === 0) {
-        first = $('#result3').text();
+        first = beautify($('#result3').text());
       }
     }
   }
   out.x = first;
   out.y = second;
   out.type = type;
+  return out;
+}
+
+function beautify(str) {
+  var out = '';
+  for (var i = 0; i < str.length; i++) {
+    if (!nums.includes(str.charAt(i))) {
+      out += ' ';
+      out += str.charAt(i);
+      out += ' ';
+    } else {
+      out += str.charAt(i);
+    }
+  }
   return out;
 }
 

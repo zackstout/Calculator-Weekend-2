@@ -10,9 +10,10 @@ html, body {
  }
 
  #history {
-   font-size: 20px;
+   font-size: 24px;
+   font-style: oblique;
    font-family: "Courier New", Courier, monospace;
-   color: aquamarine;
+   color: blue;
  }
 
 .num, .op, #submit, #submit2, .num2, .op2, #clear {
