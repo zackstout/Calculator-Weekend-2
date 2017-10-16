@@ -1,121 +1,121 @@
 
- /*Navigation bar and headings*/
- .nav, .base {
-   width: 155px;
-   height: 84px;
-   font-size: 14px;
-   padding: 15px;
- }
- .nav:hover {
-   background-color: gold;
- }
- .base:hover {
-   background-color: powderBlue;
- }
- body {
-   background-image: url('images/sharks.jpg')
- }
- @font-face {
-   font-family: "calc";
-   src: url('fonts/pocket_calcuatlor_tt.ttf');
- }
- @font-face {
-   font-family: "watery";
-   src: url('fonts/BinaryWaters.ttf');
- }
- .fun {
-   color: Blue;
-   text-transform: uppercase;
-   font-style: normal;
-   font-family: Courier, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
-   font-size: 30px;
- }
- h2 {
-   text-align: center;
-   opacity: 0.65;
-   background-color: lightBlue;
-   color: goldenrod;
-   font-family: Garamond;
+/*Navigation bar and headings*/
+.nav, .base {
+  width: 155px;
+  height: 84px;
+  font-size: 14px;
+  padding: 15px;
+}
+.nav:hover {
+  background-color: gold;
+}
+.base:hover {
+  background-color: powderBlue;
+}
+body {
+  background-image: url('images/sharks.jpg')
+}
+@font-face {
+  font-family: "calc";
+  src: url('fonts/pocket_calcuatlor_tt.ttf');
+}
+@font-face {
+  font-family: "watery";
+  src: url('fonts/BinaryWaters.ttf');
+}
+.fun {
+  color: Blue;
+  text-transform: uppercase;
+  font-style: normal;
+  font-family: Courier, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
+  font-size: 30px;
+}
+h2 {
+  text-align: center;
+  opacity: 0.65;
+  background-color: lightBlue;
+  color: goldenrod;
+  font-family: Garamond;
 
- }
- h1 {
-   text-align: center;
-   font-size: 50px;
-   font-family: "watery";
-   color: blue;
-   opacity: 0.7;
-   letter-spacing: 4px;
- }
+}
+h1 {
+  text-align: center;
+  font-size: 50px;
+  font-family: "watery";
+  color: blue;
+  opacity: 0.7;
+  letter-spacing: 4px;
+}
 
 
 /*Base Mode*/
- #first, #second {
-   font-size: 20px;
-   padding: 4px;
-   margin: 5px;
-   width: 150px;
-   opacity: 0.64;
-   color: blue;
-   font-weight: bold;
- }
+#first, #second {
+  font-size: 20px;
+  padding: 4px;
+  margin: 5px;
+  width: 150px;
+  opacity: 0.64;
+  color: blue;
+  font-weight: bold;
+}
 
- #again {
-   font-size: 16px;
-   width: 220px;
-   height: 75px;
-   margin: 10px;
- }
+#again {
+  font-size: 16px;
+  width: 220px;
+  height: 75px;
+  margin: 10px;
+}
 
- #in, #in2 {
-   font-size: 20px;
-   font-family: "watery";
-   color: crimson;
-   letter-spacing: 3px;
-   opacity: 0.85
- }
+#in, #in2 {
+  font-size: 20px;
+  font-family: "watery";
+  color: crimson;
+  letter-spacing: 3px;
+  opacity: 0.85
+}
 
- #in2 {
-   margin-left: 40px;
- }
+#in2 {
+  margin-left: 40px;
+}
 
-  .base {
-    width: 100px;
-    height: 60px;
-    margin: 22px;
-    font-size: 32px;
-    font-weight: bold;
-    color: darkSlateBlue;
-    background-color: aquamarine;
-    opacity: 0.8;
-    padding: 5px;
-  }
+.base {
+  width: 100px;
+  height: 60px;
+  margin: 22px;
+  font-size: 32px;
+  font-weight: bold;
+  color: darkSlateBlue;
+  background-color: aquamarine;
+  opacity: 0.8;
+  padding: 5px;
+}
 
- #result {
-   font-size: 36px;
-   font-family: Courier;
-   font-weight: bold;
-   background-color: goldenrod;
-   color: darkBlue;
-   border-radius: 15px;
-   text-align: right;
-   margin-left: 40%;
-   margin-right: 25%;
-   padding-left: 10px;
-   padding-right: 2%;
-   padding-top: 1%;
-   height: 50px;
-   width: 400px;
-   opacity: 0.77;
- }
+#result {
+  font-size: 36px;
+  font-family: Courier;
+  font-weight: bold;
+  background-color: goldenrod;
+  color: darkBlue;
+  border-radius: 15px;
+  text-align: right;
+  margin-left: 40%;
+  margin-right: 25%;
+  padding-left: 10px;
+  padding-right: 2%;
+  padding-top: 1%;
+  height: 50px;
+  width: 400px;
+  opacity: 0.77;
+}
 
 
 /*History*/
- #history {
-   font-size: 38px;
-   font-family: "Courier New", Courier, monospace;
-   color: crimson;
-   font-weight: bold;
- }
+#history {
+  font-size: 38px;
+  font-family: "Courier New", Courier, monospace;
+  color: crimson;
+  font-weight: bold;
+}
 
 
 /*Calculator buttons*/

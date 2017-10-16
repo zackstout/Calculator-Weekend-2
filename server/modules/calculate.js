@@ -18,7 +18,7 @@ function calculateIt(input) {
   }
   output = Math.round(output*1000000000000)/1000000000000;
   console.log(output);
-  
+
   //saving data on server:
   var out = '';
   out = x + ' ' + input.type + ' ' + y + ' = ' + output;

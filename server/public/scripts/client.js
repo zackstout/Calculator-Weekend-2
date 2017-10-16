@@ -28,9 +28,9 @@ function clickHandlers() {
 
   //pro mode buttons:
   $('.num2, .op2').on('click', pressBtnPro);
+  $('#submit2').on('click', calcPro);
   $('#switch').on('click', changeSign);
   $('#PI').on('click', addPi);
-  $('#submit2').on('click', calcPro);
   $('#clear').on('click', clearPro);
   $('.num2, .op2, #submit2, #clear').on('mousedown', changeBorder);
   $('.num2, .op2, #submit2, #clear').on('mouseup', changeBack);
@@ -43,8 +43,10 @@ function changeBorder() {
 function changeBack() {
   $(this).css("box-shadow", "0px 0px");
 }
+
+
 //
 // FINAL COMMENTS:
-// -Still a few bugs: can't get overflow to work; the decimal bug (sometimes a straightforward computation shows up with a trailing '.0000001'); also having trouble formatting the calculator, specifically getting space under the output box
-// -A few things I wanted but didn't get to: add parentheses buttons and the requisite functionality, maybe even teach the calculator order of operations; make it so that if you click a number button after a computation is complete, it starts a new output string and shows 0, instead of appending to existing output string
-// -I learned it will definitely pay in the future to map out my plan ahead of time so i don't have to waste time relearning the code i wrote at 2am last night and organizing it into something readable
+// --Still a few bugs: can't get overflow to work; the decimal bug (sometimes a straightforward computation shows up with e.g. a trailing '.0000001'); also having trouble formatting the calculator, specifically getting space under the output box
+// --A few things I wanted but didn't get to: add parentheses buttons and the requisite functionality, maybe even teach the calculator order of operations; make it so that if you click a number button after a computation is complete, it starts a new output string and shows 0, instead of appending to existing output string
+// --I learned it will definitely pay in the future to map out my plan ahead of time so i don't have to waste time relearning the code i wrote at 2am last night and organizing it into something readable
