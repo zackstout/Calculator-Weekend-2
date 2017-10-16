@@ -1,5 +1,5 @@
 
-var inputHard = '';
+var inputHard = '', counter = 0;
 var nums = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '.'];
 
 //Parsing the input-string into an actionable computation:
@@ -39,12 +39,17 @@ function beautify(str) {
   return out;
 }
 
-//Handling the functionality of enter button:
+//Handling the functionality of non-enter buttons:
 function pressBtnHard() {
-  console.log($(this).text());
+  if (counter === 0) {
+    $('#result2').text('');
+  }
   inputHard += $(this).text();
+  $('#result2').append($(this).text());
+  counter += 1;
 }
 
+//Handling the enter button:
 function calcHard() {
   console.log(inputHard);
   console.log(parserReal(inputHard));
@@ -57,6 +62,7 @@ function calcHard() {
   .done(function(response) {
     $('#result2').text(response);
     inputHard = '';
+    counter = 0;
   })
   .fail(function(msg) {
     console.log('whoops', msg);
