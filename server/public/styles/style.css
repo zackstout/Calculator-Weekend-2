@@ -5,6 +5,7 @@
   height: 84px;
   font-size: 14px;
   padding: 15px;
+  opacity: 0.8;
 }
 .nav:hover {
   background-color: gold;
@@ -40,7 +41,7 @@ h2 {
 }
 h1 {
   text-align: center;
-  font-size: 50px;
+  font-size: 70px;
   font-family: "watery";
   color: blue;
   opacity: 0.7;
