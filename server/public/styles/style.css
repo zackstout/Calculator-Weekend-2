@@ -54,6 +54,9 @@
    padding: 4px;
    margin: 5px;
    width: 150px;
+   opacity: 0.64;
+   color: blue;
+   font-weight: bold;
  }
 
  #again {
@@ -89,6 +92,8 @@
 
  #result {
    font-size: 36px;
+   font-family: Courier;
+   font-weight: bold;
    background-color: goldenrod;
    color: darkBlue;
    border-radius: 15px;
@@ -99,7 +104,7 @@
    padding-right: 2%;
    padding-top: 1%;
    height: 50px;
-   width: 350px;
+   width: 400px;
    opacity: 0.77;
  }
 

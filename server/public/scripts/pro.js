@@ -1,20 +1,27 @@
 
-var inputPro = '', proObj = {}, counter = 0;
+var inputPro = '', proObj = {}, counter = 0, counter2 = 0, counter3 = 0;
 
 //clear button:
 function clearPro() {
   console.log($('#result3').text());
-  $('#result3').text('');
+  $('#result3').text('0');
   counter = 0;
-  $('#nil').show();
+  counter2 = 0;
 }
 
 //all other buttons:
 function pressBtnPro() {
   console.log("button", $(this).text());
+  if (counter2 === 0 && counter3 > 0) {
+    inputPro = '';
+    $('#result3').text('');
+    $('#result3').append($(this).text());
+  } else {
   inputPro += $(this).text();
   $('#result3').append($(this).text());
-  $('#nil').hide();
+}
+  counter2 += 1;
+  counter3 += 1;
 }
 
 function addPi() {
