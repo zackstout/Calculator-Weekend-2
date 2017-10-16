@@ -35,7 +35,7 @@ function pressBtnPro() {
     $('#result3').append($(this).text());
   }
   counter2 += 1;
-  console.log(counter2);
+  console.log(counter);
   counter3 += 1;
   counter4 += 1;
   // console.log(counter4);
@@ -77,12 +77,13 @@ function calcPro() {
     $('#result3').text(response);
     inputPro = '';
 
-    console.log(obj.x, obj.type, obj.y, response);
+    // console.log(obj.x, obj.type, obj.y, response);
+    console.log(counter);
 
     //append results to dom:
     //toggling this between counter and counter2 changes whether first or all others are messed up:
     if (counter === 0) {
-      $('#history').append('<p class="hist">' + ' ' + obj.x + ' ' + obj.type + ' ' + obj.y + ' = ' + response + '</p>');
+      $('#history').append('<p class="hist">' + ' ' + obj2.x + ' ' + obj2.type + ' ' + obj2.y + ' = ' + response + '</p>');
     } else {
       // console.log(obj.x);
       $('#history').append('<p class="hist">' + obj.x + ' = ' + response + '</p>');
