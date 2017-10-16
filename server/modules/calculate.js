@@ -1,8 +1,10 @@
 
+var computations = [];
+
 function calculateIt(input) {
   var x = parseForDec(input.x);
   var y = parseForDec(input.y);
-  console.log(input);
+  // console.log(input);
   var output = '';
   if (input.type === "+"){
     output = x + y;
@@ -16,6 +18,13 @@ function calculateIt(input) {
   }
   output = Math.round(output*1000000000000)/1000000000000;
   console.log(output);
+  
+  //saving data on server:
+  var out = '';
+  out = x + ' ' + input.type + ' ' + y + ' = ' + output;
+  computations.push(out);
+  console.log(computations);
+
   return output;
 }
 

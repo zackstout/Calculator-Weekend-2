@@ -7,6 +7,7 @@ var calculator = require('./modules/calculate.js');
 //set up server:
 var app = express();
 var port = 5050;
+var output = [];
 
 app.use(express.static('server/public'));
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -26,8 +27,16 @@ app.post('/calculate2', function(req, res) {
 //Pro mode route:
 app.post('/calculate3', function(req, res) {
   console.log(req.body);
+
   res.send(String(calculator(req.body)));
 });
+// 
+// if (counter2 === 0) {
+//   $('#history').append('<p class="hist">' + ' ' + obj.x + ' ' + obj.type + ' ' + obj.y + ' = ' + response + '</p>');
+// } else {
+//   console.log(obj.x);
+//   $('#history').append('<p class="hist">' + obj.x + ' = ' + response + '</p>');
+// }
 
 //Listener
 app.listen(port, function() {
