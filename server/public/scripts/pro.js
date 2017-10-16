@@ -68,7 +68,7 @@ function calcPro() {
   console.log("object2", obj2);
   $.ajax({
     method: 'POST',
-    url: '/calculate3',
+    url: '/calculate/pro',
     // data: obj
     data: obj2
   })

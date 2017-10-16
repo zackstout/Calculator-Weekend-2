@@ -56,7 +56,7 @@ function calcHard() {
   var obj = parserReal(inputHard);
   $.ajax({
     method: 'POST',
-    url: '/calculate2',
+    url: '/calculate/hard',
     data: obj
   })
   .done(function(response) {

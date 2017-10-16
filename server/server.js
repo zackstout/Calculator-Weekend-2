@@ -2,7 +2,8 @@
 //dependencies:
 var express = require('express');
 var bodyParser = require('body-parser');
-var calculator = require('./modules/calculate.js');
+// var calculator = require('./modules/calculate.js');
+var calcRouter = require('./routes/calc_router.js');
 
 //set up server:
 var app = express();
@@ -11,25 +12,7 @@ var output = [];
 
 app.use(express.static('server/public'));
 app.use(bodyParser.urlencoded({ extended: true }));
-
-//can I just do all three modes in one route? It would seem so...
-
-//Base mode route:
-app.post('/calculate', function(req, res) {
-  res.send(String(calculator(req.body)));
-});
-
-//Hard mode route:
-app.post('/calculate2', function(req, res) {
-  res.send(String(calculator(req.body)));
-});
-
-//Pro mode route:
-app.post('/calculate3', function(req, res) {
-  console.log(req.body);
-
-  res.send(String(calculator(req.body)));
-});
+app.use('/calculate', calcRouter);
 
 //Listener
 app.listen(port, function() {
