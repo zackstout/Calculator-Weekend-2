@@ -1,7 +1,7 @@
 
 var inputPro = '', proObj = {}, counter = 0, counter2 = 0, counter3 = 0;
 
-//clear button:
+//Clear button:
 function clearPro() {
   console.log($('#result3').text());
   $('#result3').text('0');
@@ -9,9 +9,12 @@ function clearPro() {
   counter2 = 0;
 }
 
-//all other buttons:
+//Numeral and Operator buttons:
 function pressBtnPro() {
   console.log("button", $(this).text());
+  if (counter3 === 0) {
+    $('#result3').text('');
+  }
   if (counter2 === 0 && counter3 > 0) {
     inputPro = '';
     $('#result3').text('');
@@ -24,6 +27,7 @@ function pressBtnPro() {
   counter3 += 1;
 }
 
+//Specialty buttons:
 function addPi() {
   inputPro += (Math.PI).toFixed(8);
   $('#result3').append((Math.PI).toFixed(8));
@@ -40,7 +44,7 @@ function changeSign() {
   }
 }
 
-//enter button:
+//Enter button:
 function calcPro() {
   var obj = parserReal(inputPro);
   //all we needed to get negatives live:
@@ -59,7 +63,7 @@ function calcPro() {
     inputPro = '';
 
     //append results to dom:
-    if (counter === 0) {
+    if (counter2 === 0) {
       $('#history').append('<p class="hist">' + ' ' + obj.x + ' ' + obj.type + ' ' + obj.y + ' = ' + response + '</p>');
     } else {
       console.log(obj.x);
