@@ -108,6 +108,7 @@
    opacity: 0.77;
  }
 
+
 /*History*/
  #history {
    font-size: 38px;
@@ -115,6 +116,7 @@
    color: crimson;
    font-weight: bold;
  }
+
 
 /*Calculator buttons*/
 .num, .op, #submit, #submit2, .num2, .op2, .op3, #clear {
@@ -151,6 +153,7 @@
 #submit:hover, #submit2:hover {
   background-color: lightGreen;
 }
+
 
 /*Calculator styling*/
 #calc, #calc2 {

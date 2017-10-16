@@ -30,13 +30,6 @@ app.post('/calculate3', function(req, res) {
 
   res.send(String(calculator(req.body)));
 });
-// 
-// if (counter2 === 0) {
-//   $('#history').append('<p class="hist">' + ' ' + obj.x + ' ' + obj.type + ' ' + obj.y + ' = ' + response + '</p>');
-// } else {
-//   console.log(obj.x);
-//   $('#history').append('<p class="hist">' + obj.x + ' = ' + response + '</p>');
-// }
 
 //Listener
 app.listen(port, function() {
