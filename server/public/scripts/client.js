@@ -43,13 +43,9 @@ function changeBorder() {
 function changeBack() {
   $(this).css("box-shadow", "0px 0px");
 }
-
-// TO DO:
-// add parentheses functionality (seems hard and maybe not worth it??????)
-// fix overflow
-// save each calculation in array on server
-// also the decimal bug
-// also make it know the order of ops (????)
-// make it so that if you click a number button after
-//a computation is complete, you start a new string,
-//and so that it shows 0 but doesnt affect the string
+//
+// FINAL COMMENTS:
+// -Still a few bugs: can't get 0 that appears on "clear" to align right; can't get overflow to work; the decimal bug; also having trouble formatting the calculator, specifically getting space under the output box
+// -A few things I wanted but didn't get to: add parentheses buttons and the requisite functionality, maybe even teach the calculator order of operations; make it so that if you click a number button after a computation is complete, it starts a new string and shows 0
+// -I still have to push each computation to an array on the server; also want to make hard mode show string;
+// -I learned it will definitely pay in the future to map out my plan ahead of time so i don't have to waste time relearning the code i wrote at 2am last night and organizing it into something readable

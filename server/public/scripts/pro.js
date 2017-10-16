@@ -53,10 +53,10 @@ function calcPro() {
 
     //append results to dom:
     if (counter === 0) {
-      $('#history').append('<p>' + ' ' + obj.x + ' ' + obj.type + ' ' + obj.y + ' = ' + response + '</p>');
+      $('#history').append('<p class="hist">' + ' ' + obj.x + ' ' + obj.type + ' ' + obj.y + ' = ' + response + '</p>');
     } else {
       console.log(obj.x);
-      $('#history').append('<p>' + obj.x + ' = ' + response + '</p>');
+      $('#history').append('<p class="hist">' + obj.x + ' = ' + response + '</p>');
     }
     counter ++;
   })

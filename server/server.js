@@ -11,6 +11,8 @@ var port = 5050;
 app.use(express.static('server/public'));
 app.use(bodyParser.urlencoded({ extended: true }));
 
+//can I just do all three modes in one route? It would seem so...
+
 //Base mode route:
 app.post('/calculate', function(req, res) {
   res.send(String(calculator(req.body)));

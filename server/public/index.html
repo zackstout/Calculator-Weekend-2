@@ -12,7 +12,7 @@
 </head>
 
 <body>
-  <h1>Get Calculatin</h1>
+  <h1>Get Calculatin'</h1>
   <div id="navigation">
     <button class="nav" id="togBase">Base Mode</button><br><br>
     <button class="nav" id="togHard">Hard Mode</button><br><br>
@@ -21,13 +21,15 @@
 
 
   <div id="base">
-    <h2> Base Mode: <span class="fun">operate on two numbers!</span></h2>
+    <h2> Base Mode -- <span class="fun">operate on two numbers!</span></h2>
     <span id="in">First number: </span><input id = "first" type="text"/>
-    <span id= "in">Second number: </span><input id = "second" type="text"/><br><br>
-    <button class = "base" id="add" data-type="+">Add 'em foo'</button>
-    <button class = "base" id="subtract" data-type="-">Subtract 'em foo'</button>
-    <button class = "base" id="multiply" data-type="x"> Multiply 'em foo'</button>
-    <button class = "base" id="divide" data-type="/">Divide 'em foo'</button><br><br>
+    <span id= "in2">Second number: </span><input id = "second" type="text"/><br><br>
+    <div id="btns">
+    <button class = "base" id="add" data-type="+">+</button>
+    <button class = "base" id="subtract" data-type="-">-</button>
+    <button class = "base" id="multiply" data-type="x">x</button>
+    <button class = "base" id="divide" data-type="/">/</button><br><br>
+  </div>
     <div id="result">
     </div>
     <div id="restart">
@@ -38,7 +40,7 @@
 
 
   <div id="hard">
-    <h2> hard mode: <span class="fun">input a calculation to perform!</span></h2>
+    <h2> Hard Mode -- <span class="fun">input a calculation to perform!</span></h2>
     <div id="calc">
       <table>
         <thead>
@@ -78,7 +80,7 @@
 
 
   <div id="pro">
-    <h2> pro mode: <span class="fun">simulate a calculator!</span></h2>
+    <h2> Pro Mode -- <span class="fun">simulate a calculator!</span></h2>
     <div id="calc2">
       <table>
         <thead>

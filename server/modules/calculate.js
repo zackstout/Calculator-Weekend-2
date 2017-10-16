@@ -26,7 +26,7 @@ function parseForDec(num) {
     var power = (String(last).length * (-1));
     var out = first + Math.pow(10, power)*last;
 
-    //trying to get negative decimals live:
+    //trying to get negative decimals live (seems to work):
     if (num.includes('-')) {
       out = first - Math.pow(10, power)*last;
     }
