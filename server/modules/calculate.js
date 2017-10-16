@@ -17,7 +17,7 @@ function calculateIt(input) {
     output = Math.round(divide*100000)/100000;
   }
   output = Math.round(output*1000000000000)/1000000000000;
-  console.log(output);
+  // console.log(output);
 
   //saving data on server:
   var out = '';
@@ -39,7 +39,7 @@ function parseForDec(num) {
     if (num.includes('-')) {
       out = first - Math.pow(10, power)*last;
     }
-    console.log(first, last, power, out);
+    // console.log(first, last, power, out);
     return out;
   } else {
     return parseInt(num);

@@ -32,11 +32,11 @@ body {
 }
 h2 {
   text-align: center;
-  opacity: 0.65;
+  opacity: 0.85;
   background-color: lightBlue;
   color: goldenrod;
   font-family: Garamond;
-
+  text-transform: uppercase;
 }
 h1 {
   text-align: center;
