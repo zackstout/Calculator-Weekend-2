@@ -7,7 +7,7 @@ var calcRouter = require('./routes/calc_router.js');
 
 //set up server:
 var app = express();
-var port = 5050;
+var port = process.env.PORT || 5050;
 var output = [];
 
 app.use(express.static('server/public'));
